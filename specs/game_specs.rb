@@ -10,16 +10,15 @@ class GameTest< MiniTest::Test
   end
 
   def test_P1_wins()
-    assert_equal("Player 1 Wins", @game1.check_win("Paper", "Rock"))
+    assert_equal("Player 1 Wins", @game1.play("Paper", "Rock"))
   end
 
   def test_P2_wins()
-    assert_equal("Player 2 Wins", @game1.check_win("Scissors", "Rock"))
+    assert_equal("Player 2 Wins", @game1.play("Scissors", "Rock"))
   end
 
   def test_draw()
-    assert_equal("Draw", @game1.check_win("Paper", "Paper"))
-  ends
-
+    assert_equal("Draw", @game1.play("Paper", "Paper"))
+  end
 
 end
